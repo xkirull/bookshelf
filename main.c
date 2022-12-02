@@ -41,7 +41,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
         L"Program Windows",
         WS_OVERLAPPEDWINDOW ^ WS_THICKFRAME ^ WS_MAXIMIZEBOX ^ WS_MINIMIZEBOX,    
 
-        CW_USEDEFAULT, CW_USEDEFAULT, 405, 450,
+        CW_USEDEFAULT, CW_USEDEFAULT, 645, 450,
 
         NULL,       
         NULL,       
@@ -148,7 +148,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                     break;
 
                 case FILE_MENU_HELP:
-                    openLink("https://github.com/kirill22111333");
+                    openLink("https://github.com/xkirull/bookshelf");
                     break;
             }
 
