@@ -1,3 +1,26 @@
+char *trim(char *str)
+{
+  char *end;
+
+  while(isspace((unsigned char)*str))
+  {
+    str++;
+  }
+
+  if(*str == 0)
+    return str;
+
+  end = str + strlen(str) - 1;
+  while(end > str && isspace((unsigned char)*end)) 
+  {
+    end--;
+  }
+
+  end[1] = '\0';
+
+  return str;
+}
+
 char *stringFull(char *string, char *buff)
 {
     if(string[0] == '\0'){
@@ -20,7 +43,7 @@ char **parceString(char *data, char *delimiter)
 	while (ptr != NULL)
 	{
         arrayTableValue[i] = malloc(sizeof(ptr));
-        arrayTableValue[i++] = ptr;
+        arrayTableValue[i++] = trim(ptr);
 
 		ptr = strtok(NULL, delimiter);
 	}

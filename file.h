@@ -2,7 +2,7 @@
 #define BUF_SIZE 65536
 #define FILE_TABLE_SIZE 4
 #define FILE_BASE_DELIMITER "\n"
-#define FILE_STRING_DELIMITER " | "
+#define FILE_STRING_DELIMITER "|"
 
 void initFile()
 {
