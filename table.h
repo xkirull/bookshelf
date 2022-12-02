@@ -71,16 +71,16 @@ void CreateMenuItem(HWND hwnd)
     
     hwndList = CreateWindow(WC_LISTVIEW, NULL, 
         WS_VISIBLE | WS_BORDER | WS_CHILD | LVS_REPORT | LVS_EDITLABELS, 
-        0, 0, 400, 400, 
+        0, 0, 640, 400, 
         hwnd, ID_LISTVIEW, (HINSTANCE) GetWindowLong(hwnd, GWL_HINSTANCE), NULL);
 
     ListView_SetExtendedListViewStyle(hwndList,
         LVS_EX_FULLROWSELECT | LVS_EX_HEADERDRAGDROP | LVS_EX_GRIDLINES | LVS_OWNERDATA | LVS_SORTASCENDING);
 
-    CreateColumn(hwndList, 1, L"Id", 50);
-    CreateColumn(hwndList, 2, L"Title", 50);
-    CreateColumn(hwndList, 3, L"Description", 150);
-    CreateColumn(hwndList, 3, L"Link", 130);
+    CreateColumn(hwndList, 1, L"Id", 40);
+    CreateColumn(hwndList, 2, L"Title", 200);
+    CreateColumn(hwndList, 3, L"Description", 250);
+    CreateColumn(hwndList, 3, L"Link", 150);
 
     insertData();
 }
